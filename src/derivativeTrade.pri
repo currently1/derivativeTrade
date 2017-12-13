@@ -7,7 +7,6 @@
 #message("You are running qmake on a generated .pro file. This may not work!")
 
 INCLUDEPATH += $$PWD
-DEPENDPATH += $$PWD
 
 HEADERS += $$PWD/common/ctp.h \
     $$PWD/common/mdspi.h \
@@ -31,13 +30,8 @@ HEADERS += $$PWD/common/ctp.h \
     $$PWD/OptionModel/JuZhong99.h \
     $$PWD/OptionModel/stdafx.h \
     $$PWD/OptionModel/targetver.h \
-    $$PWD/utility/easygoing/easylogging++.h
+    $$PWD/utility/easylogging/easylogging++.h
 
-OPTIONMODEL += $$PWD/OptionModel/asianPrice.h \
-    $$PWD/OptionModel/bjsmodel.h \
-    $$PWD/OptionModel/JuZhong99.h \
-    $$PWD/OptionModel/stdafx.h \
-    $$PWD/OptionModel/targetver.h 
 
 SOURCES += $$PWD/common/ctp.cpp \
     $$PWD/common/mdspi.cpp \
@@ -60,7 +54,7 @@ SOURCES += $$PWD/common/ctp.cpp \
     $$PWD/source/qstrategythread.cpp \
     $$PWD/source/quserstrategy.cpp \
     $$PWD/source/traderqtapp.cpp \
-    $$PWD/utility/easygoing/easylogging++.cc
+    $$PWD/utility/easylogging/easylogging++.cc
 
 
 FORMS += $$PWD/view/traderqtapp.ui \

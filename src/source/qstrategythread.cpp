@@ -266,7 +266,7 @@ void QStrategyThread::StrategyOperationMutil(){
 	}
 	// Product Total
 	if(this->m_instrumentList.size() > 1){
-		setModelData(this->productName,CallOptionGreeks,PutOptionGreeks,CurHedgeHands,1.0,underlyingPrice,this->productName);
+        setModelData(this->productName,CallOptionGreeks,PutOptionGreeks,CurHedgeHands,1.0,underlyingPrice,this->productName,this->strategyCash);
 	}
 
 	//=====================每个标的对冲量获取====================================
@@ -398,7 +398,7 @@ void QStrategyThread::StrategyOptionCalcultate(CThostFtdcDepthMarketDataField *p
 
 	PrintLogging( pDepthMarketData, CallOptionGreeks, PutOptionGreeks, CurHedgeHands, _optionParam);
 
-	setModelData(this->instrumentCode,CallOptionGreeks,PutOptionGreeks,CurHedgeHands,1.0,0,NULL);
+    setModelData(this->instrumentCode,CallOptionGreeks,PutOptionGreeks,CurHedgeHands,1.0,0,NULL,this->strategyCash);
 
 
 	// 获取真实持仓量

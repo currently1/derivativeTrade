@@ -10,7 +10,7 @@
 #include <map>
 #include "traderspi.h"
 
-#include "LibXL\include\libxl.h"
+//#include "LibXL\include\libxl.h"
 #include "option.h"
 using optionModel::Greeks;
 using optionModel::OptionType;
@@ -134,6 +134,6 @@ private:
 	bool m_firstDay;
 	optionModel::optionEngine m_optionEngine;
 
-	 libxl::Book* m_book;//book 就代表内存中的一个xlsx实例
+     //libxl::Book* m_book;//book 就代表内存中的一个xlsx实例
 	
 };

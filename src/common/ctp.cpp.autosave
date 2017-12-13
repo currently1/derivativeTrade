@@ -46,7 +46,7 @@ void ctp::init( ){
 	//--------------初始化交易UserApi，创建交易API实例----------------------------------
 	this->pUserApi_trade = CThostFtdcTraderApi::CreateFtdcTraderApi(".\\TDflow\\");
 
-	this->pUserSpi_trade = new CtpTraderSpi(pUserApi_trade, pUserApi_md, pUserSpi_md);//构造函数初始化三个变量
+0	this->pUserSpi_trade = new CtpTraderSpi(pUserApi_trade, pUserApi_md, pUserSpi_md);//构造函数初始化三个变量
 	pUserApi_trade->RegisterSpi((CThostFtdcTraderSpi*)pUserSpi_trade);// 注册事件类
 	pUserApi_trade->SubscribePublicTopic(THOST_TERT_RESTART);// 注册公有流
 	pUserApi_trade->SubscribePrivateTopic(THOST_TERT_QUICK);// 注册私有流THOST_TERT_QUICK
